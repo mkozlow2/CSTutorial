@@ -6,7 +6,7 @@ namespace StudentDiary
 {
     class Diary
     {
-        private List<float> ratings;
+        private List<float> ratings = new List<float>();
 
         public void AddRating(float rating)
         {

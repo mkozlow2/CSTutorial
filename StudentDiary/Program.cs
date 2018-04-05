@@ -10,10 +10,24 @@ namespace StudentDiary
     {
         static void Main(string[] args)
         {
-            for(; ; )
+            float temp = 0, i = 1;
+            bool state = true;
+            Diary diary = new Diary();
+            while(state == true)
             {
-               // Console.Write("Podaj ocenę: ");
-               // Diary.AddRating(float.Parse(Console.ReadLine()));
+                
+                Console.Write("Podaj ocenę: ");
+                state = float.TryParse(Console.ReadLine(), out temp);
+                if (temp < 1 || temp > 6)
+                    continue;
+                diary.AddRating(temp);
+
+                Console.WriteLine("Srednia ocen: " + diary.CalculateAverage());
+                Console.WriteLine("Najmniejsza ocena: " + diary.GiveMinRating());
+                Console.WriteLine("Najwyzsza ocena: " + diary.GiveMaxRating());
+                Console.WriteLine("Ilosc ocen w dzienniczku: " + i++);
+                Console.ReadKey();
+                Console.Clear();
             }
         }
     }
