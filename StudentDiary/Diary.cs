@@ -6,7 +6,12 @@ namespace StudentDiary
 {
     class Diary
     {
-        private List<float> ratings = new List<float>();
+        private List<float> ratings;
+
+        public Diary()
+        {
+            ratings = new List<float>();
+        }
 
         public void AddRating(float rating)
         {
