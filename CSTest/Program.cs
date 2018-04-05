@@ -6,12 +6,14 @@ namespace CSTest
     {
         static void Main(string[] args)
         {
-            foreach (var item in args)
-            {
-                Console.WriteLine(item + " ");
-            }
-            Console.WriteLine("Dzień dobry");
-
+                foreach (var item in args)
+                {
+                    Console.Write(item + " ");
+                }
+                Console.WriteLine("\nDzień dobry");
+           // string name = args[0];
+           // Console.WriteLine(name);
         }
+        
     }
 }
