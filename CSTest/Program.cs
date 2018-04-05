@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CSTest
 {
@@ -10,6 +6,12 @@ namespace CSTest
     {
         static void Main(string[] args)
         {
+            foreach (var item in args)
+            {
+                Console.WriteLine(item + " ");
+            }
+            Console.WriteLine("Dzień dobry");
+
         }
     }
 }
