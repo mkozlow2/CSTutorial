@@ -13,6 +13,7 @@ namespace StudentDiary
             float temp = 0, i = 1;
             bool state = true;
             Diary diary = new Diary();
+            DiaryStatistics stats;
             while(state == true)
             {
                 
@@ -21,13 +22,14 @@ namespace StudentDiary
                 if (temp < 1 || temp > 6)
                     continue;
                 diary.AddRating(temp);
-
-                Console.WriteLine("Srednia ocen: " + diary.CalculateAverage());
-                Console.WriteLine("Najmniejsza ocena: " + diary.GiveMinRating());
-                Console.WriteLine("Najwyzsza ocena: " + diary.GiveMaxRating());
+                stats = diary.ComputeStatistics();
+                Console.WriteLine("Srednia ocen: " + stats.AverageGrade);
+                Console.WriteLine("Najmniejsza ocena: " + stats.MinGrade);
+                Console.WriteLine("Najwyzsza ocena: " + stats.MaxGrade);
                 Console.WriteLine("Ilosc ocen w dzienniczku: " + i++);
                 Console.ReadKey();
                 Console.Clear();
+                
             }
         }
     }
